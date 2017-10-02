@@ -11,12 +11,21 @@
  *    sumDigits(406) => 10
  **/
 
+ // function sumDigits(number) {
+ //   let sum = 0
+ //   let text = number.toString()
+ //   for (i=0; i<text.length; i++) {
+ //     let num = parseInt(text[i])
+ //     sum += num
+ //   }
+ //   return sum
+ // }
+
  function sumDigits(number) {
-   let sum = 0
-   let text = number.toString()
-   for (i=0; i<text.length; i++) {
-     let num = parseInt(text[i])
-     sum += num
+   sum = 0
+   while(number / 10 > 0) {
+     sum += (number % 10)
+     number = parseInt(number / 10)
    }
    return sum
  }
