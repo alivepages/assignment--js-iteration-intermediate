@@ -7,8 +7,15 @@
  *
 **/
 
-=======
- */
+function maxOfArray(numbers) {
+  var max = 0
+  for (i=0; i<numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i]
+    }
+  }
+  return max
+}
 
 console.group('JS Iterations Week');
   console.log('%cFunction: maxOfArray', 'background-color: green; color: white')
@@ -19,7 +26,7 @@ console.group('JS Iterations Week');
   console.groupCollapsed('Should return 100 for the next [100, 9, 8, 7, 6, 10] series');
     console.assert(maxOfArray([100,9,8,7,6,10]) === 100)
   console.groupEnd();
->>>>>>> 5132c95fdc6ab951494f148eb60c9e997fa63923
+
 
   console.groupCollapsed('Should return 201 for the next [84, 32, 11, 31, 12, 201] series');
     console.assert(maxOfArray([84,32,11,31,12,201]) === 201)

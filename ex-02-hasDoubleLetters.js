@@ -5,6 +5,17 @@
  *
 **/
 
+function hasDoubleLetters(word) {
+  var double = false
+  for (i=0; i<word.length-1; i++) {
+    if (word[i].toLowerCase() === word[i+1].toLowerCase()) {
+      return true
+    }
+  }
+  return false
+}
+
+
 console.group('JS Iterations Week');
   console.log('%cFunction: hasDoubleLetters', 'background-color: green; color: white')
   console.groupCollapsed('Should return true for "shutter"');

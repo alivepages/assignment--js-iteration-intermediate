@@ -6,6 +6,19 @@
  *
 **/
 
+function findLongestWord(string) {
+  let maxWord = ''
+  let maxLenght = 0
+  var words = string.replace('’',' ').split(' ')
+  for (i=0; i<words.length; i++) {
+    if (words[i].length > maxLenght) {
+      maxWord = words[i]
+      maxLenght = words[i].length
+    }
+  }
+  return maxWord
+}
+
 console.group('JS Iterations Week');
   console.log('%cFunction: findLongestWord', 'background-color: green; color: white')
   console.groupCollapsed('Should return "baskets" from "I have baskets full of lemons"');

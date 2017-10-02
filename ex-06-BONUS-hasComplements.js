@@ -12,6 +12,17 @@
  *
 */
 
+function hasComplements(number, list) {
+  for (i=0; i<list.length-1; i++) {
+    for (k=i; k<list.length; k++) {
+      if (list[i] + list [k] === number) {
+        return true
+      }
+    }
+  }
+  return false
+}
+
 var oddsArray = [1, 3, 5, 7, 9, 11, 13]
 var anotherArray = [2, 5, 6, 8, 12]
 
